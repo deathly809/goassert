@@ -11,3 +11,10 @@ func Assert(passed bool,msg ...interface{}) {
         log.Fatal(msg...)
     }
 }
+
+// ErrorAssert asserts that the error is nil
+func ErrorAssert(err error,msg ...interface{}) {
+    if err != nil {
+        log.Fatal(msg...)
+    }
+}
